@@ -1,0 +1,34 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 184px;
+  margin-top: 14px;
+
+  input {
+    height: 14px;
+    font-family: $font-default;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    border: none;
+    outline: 0;
+  }
+
+  input::placeholder {
+    font-family: $font-default;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $gray;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.search__icon {
+  margin-left: 5px;
+  margin-right: 13px;
+}
