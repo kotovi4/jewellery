@@ -21,6 +21,16 @@
   width: 100%;
   max-width: 1240px;
   min-height: 115px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 126px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: auto;
+    align-items: center;
+    padding: 18px 15px;
+  }
 }
 
 .page-header__logo {
@@ -29,6 +39,15 @@
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 7px;
+
+    svg {
+      width: 52px;
+      height: 52px;
+    }
   }
 }
 
@@ -60,6 +79,10 @@
     a {
       display: none;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
   }
 }
 
@@ -149,6 +172,12 @@
     background-position: center;
     border: 0;
     cursor: pointer;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 0;
+    width: 25px;
+    height: 19px;
   }
 }
 
