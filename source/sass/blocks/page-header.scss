@@ -74,7 +74,7 @@
   @media (max-width: $tablet-width) {
     width: auto;
     margin-top: 0;
-    padding: 25px 15px 26px 22px;;
+    padding: 25px 15px 26px 22px;
 
     a {
       display: none;
@@ -126,31 +126,31 @@
     margin-right: 0;
   }
 
-  a {
-    position: relative;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: $black;
-
-    &:hover {
-      color: $accent;
-      transition: 0.3s;
-
-      &::after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 100%;
-        height: 1px;
-        background-color: $accent;
-      }
-    }
-  }
-
   @media (max-width: $tablet-width) {
     ul {
       display: none;
+    }
+  }
+}
+
+.page-header__nav a {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+
+  &:hover {
+    color: $accent;
+    transition: 0.3s;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $accent;
     }
   }
 }
