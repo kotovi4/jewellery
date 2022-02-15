@@ -59,11 +59,27 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 94px 45px 0;
+    padding: 58px 45px 0;
+
+    h2 {
+      margin: 0 0 22px;
+    }
 
     ul {
       column-gap: 16px;
       row-gap: 20px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 42px 15px 0;
+
+    ul {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      padding: 50px 0;
+      column-gap: 24px;
+      row-gap: 27px;
     }
   }
 }
@@ -75,6 +91,16 @@
 
     img {
       height: 100%;
+    }
+  }
+
+  &--off {
+    display: block;
+  }
+
+  @media (max-width: $mobile-width) {
+    &--off {
+      display: none;
     }
   }
 }
