@@ -1,0 +1,30 @@
+.form {
+  input[type="email"] {
+    padding-left: 0;
+    font-family: $font-default;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    border: 0;
+    border-radius: 0;
+    color: $white;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  button {
+    padding: 0;
+    font-family: $font-default;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    border: 0;
+    color: $white;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  svg {
+    stroke: $white;
+  }
+}

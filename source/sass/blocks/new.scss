@@ -83,6 +83,10 @@
     right: 0;
   }
 
+  svg {
+    stroke: $accent;
+  }
+
   @media (max-width: $mobile-width) {
     display: none;
   }
