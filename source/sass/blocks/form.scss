@@ -22,6 +22,16 @@
     color: $white;
     background-color: transparent;
     cursor: pointer;
+
+    &:hover {
+      color: $accent;
+      transition: 0.3s;
+    }
+
+    &:hover svg{
+      stroke: $accent;
+      transition: 0.3s;
+    }
   }
 
   svg {
