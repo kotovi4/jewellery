@@ -122,4 +122,14 @@
       cursor: pointer;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    &--login input[type="email"] {
+      margin-bottom: 29px;
+    }
+
+    &--login button {
+      margin-top: 35px;
+    }
+  }
 }

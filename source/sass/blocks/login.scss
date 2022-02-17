@@ -29,8 +29,26 @@
     margin: 15px 0;
   }
 
-  a {
-    margin-left: 5px;
-    color: $black;
+  @media (max-width: $tablet-width) {
+    padding: 138px 52px 0;
+    width: 442px;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    padding: 84px 15px 0;
+    background-size: 270px 84px;
+    min-height: 470px;
+
+    h2 {
+      margin: 38px 0 26px;
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+}
+
+.login__sing-up {
+  margin-left: 5px;
+  color: $black;
 }
