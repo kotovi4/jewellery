@@ -1,17 +1,40 @@
 .login {
-  position: static;
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    position: fixed;
+    display: block;
+    height: 100vh;
+    background-color: $modal-bg-color;
+  }
+
+  &--opened .login__wrapper {
+    position: absolute;
+    transform: translateY(-50%);
+  }
+}
+
+.login__wrapper {
+  position: relative;
+  top: 50%;
+  left: 0;
+  right: 0;
   margin: 30px auto;
   padding: 138px 45px 0;
-  top: 50vh;
-  left: 50%;
   width: 430px;
   min-height: 586px;
+  z-index: 5;
   background-color: $blog-bg-color;
   background-image: url("../img/poppup-img.jpg");
   background-repeat: no-repeat;
   background-size: 442px 138px;
   background-position: top center;
-  z-index: 5;
 
   h2 {
     margin: 50px 0 32px;
@@ -51,4 +74,51 @@
 .login__sing-up {
   margin-left: 5px;
   color: $black;
+
+  &:hover {
+    color: $accent;
+    transition: 0.3s;
+  }
+}
+
+.login__button-close {
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  margin-left: auto;
+  padding: 10px;
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 20px;
+    height: 1px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $accent;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
