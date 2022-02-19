@@ -1,5 +1,13 @@
 .filter {
-  width: 250px;
+  form {
+    width: 250px;
+  }
+
+  @media (max-width: $tablet-width) {
+    form {
+      display: none;
+    }
+  }
 }
 
 .filter__block {
@@ -116,6 +124,33 @@
   &--close {
     button {
       display: none;
+    }
+  }
+
+  &--open {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--open {
+      display: block;
+      width: 100%;
+      margin-bottom: 50px;
+      min-height: 68px;
+      font-family: $font-default;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: $white;
+      background-color: $accent;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--open {
+      margin-bottom: 40px;
     }
   }
 }

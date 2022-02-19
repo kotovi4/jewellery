@@ -3,6 +3,16 @@
   margin: 80px auto 36px;
   padding: 0 45px;
   max-width: 1260px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    margin: 52px auto 36px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 38px auto 26px;
+    padding: 0 15px;
+  }
 }
 
 .catalog__list {
@@ -14,20 +24,14 @@
   text-align: center;
   margin: 0 0 32px 50px;
   padding: 0;
-    // overflow: hidden;
 
   li {
     position: relative;
     left: 0;
     flex-shrink: 0;
-    // width: calc(25% - 22.5px);
-    // transition: all 0.3s ease-out;
+    max-width: 270px;
+    transition: all 0.3s ease-out;
     cursor: pointer;
-
-    //для перемещения использовать
-    // left: calc(0% - 0px);
-    // left: calc(-100% - 30px);
-    // left: calc(-200% - 60px);
 
     &:hover h3,
     &:hover p {
@@ -54,7 +58,9 @@
   }
 
   img {
-    object-fit: cover;
+    display: block;
+    max-width: 100%;
+    height: auto;
     transform: scale(1);
     transition: all 0.3s ease-in-out;
 
@@ -62,13 +68,33 @@
       transform: scale(1.05);
     }
   }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+
+    h3 {
+      margin: 22px 0 6px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 14px;
+
+    h3 {
+      margin: 18px 0 6px;
+    }
+
+    img {
+      height: 136px
+    }
+  }
 }
 
 .catalog__nav {
   position: relative;
   display: flex;
-  margin-left: 50px;
-  margin-bottom: 38px;
+  margin: 0 0 38px 50px;
   padding-top: 28px;
 
   &::before {
@@ -93,6 +119,23 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
+
+    &:hover {
+      color: $accent;
+      transition: 0.3s;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 2px;
+
+    button {
+      display: none;
+    }
   }
 }
 
@@ -102,6 +145,10 @@
   margin: 0 auto;
   padding: 0 36px 0 0;
   list-style: none;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
 }
 
 .catalog__toggle {
@@ -117,5 +164,9 @@
 
   &--active {
     color: $black;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 11px 0 11px;
   }
 }
