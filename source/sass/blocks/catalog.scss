@@ -1,0 +1,67 @@
+.catalog {
+  display: flex;
+  margin: 80px auto 36px;
+  padding: 0 45px;
+  max-width: 1260px;
+}
+
+.catalog__container {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 25px;
+    list-style: none;
+    text-align: center;
+    margin: 0 0 32px 50px;
+    padding: 0;
+    // overflow: hidden;
+  }
+
+  li {
+    position: relative;
+    left: 0;
+    flex-shrink: 0;
+    // width: calc(25% - 22.5px);
+    // transition: all 0.3s ease-out;
+    cursor: pointer;
+
+    //для перемещения использовать
+    // left: calc(0% - 0px);
+    // left: calc(-100% - 30px);
+    // left: calc(-200% - 60px);
+
+    &:hover h3,
+    &:hover p {
+      color: $accent;
+      transition: 0.3s;
+    }
+  }
+
+  h3 {
+    margin: 18px 0 6px 0;
+    font-family: $font-default;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: $black;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: $black;
+  }
+
+  img {
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
