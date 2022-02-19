@@ -7,6 +7,36 @@
     form {
       display: none;
     }
+
+    &--opened form {
+        position: relative;
+        display: block;
+        margin-top: 27px;
+        width: 423px;
+        box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+    }
+
+    &--opened .filter__container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 957px;
+      max-height: 100vh;
+      overflow-y: scroll;
+      background-color: $white;
+      z-index: 15;
+    }
+
+    &--opened .filter__block p {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    &--opened .filter__item label {
+      font-size: 16px;
+      line-height: 130%;
+    }
   }
 }
 
@@ -44,6 +74,11 @@
     transform: rotate(45deg);
     top: 0;
     right: 3px;
+  }
+
+  @media (max-width: $tablet-width) {
+    border: 0;
+    border-bottom: 1px solid $accent;
   }
 }
 
@@ -132,6 +167,39 @@
   }
 
   @media (max-width: $tablet-width) {
+    &--clear button,
+    &--apply button {
+      width: 362px;
+      margin-left: 21px;
+      margin-right: 40px;
+    }
+
+    &--close {
+      display: block;
+      position: absolute;
+      top: -16px;
+      right: -16px;
+      width: 32px;
+      height: 32px;
+    }
+
+    &--close button {
+      display: block;
+      width: 32px;
+      height: 32px;
+      min-height: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    &--close svg {
+      fill: $white;
+    }
+
+    &--close svg:hover {
+      fill: $accent;
+    }
+
     &--open {
       display: block;
       width: 100%;
