@@ -3,3 +3,13 @@
   flex-direction: column;
   min-height: 100%;
 }
+
+.page-body--nojs  {
+  @media (max-width: $tablet-width) {
+    .page-header--opened {
+      position: relative;
+      height: auto;
+      min-height: 778px;
+    }
+  }
+}

@@ -115,6 +115,9 @@
   display: block;
   margin-right: 50px;
 
+  svg {
+    fill: $accent;
+  }
 
   @media (max-width: $tablet-width) {
     display: block;
@@ -123,7 +126,6 @@
     grid-row: 1/2;
 
     svg {
-      fill: $accent;
       width: 52px;
       height: 52px;
     }
