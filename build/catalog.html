@@ -28,12 +28,12 @@
             <svg width="14" height="14">
               <use xlink:href="img/sprite_auto.svg#search-icon"></use>
             </svg>
+            <input type="search" id="search" placeholder="Type here to search">
           </label>
-          <input type="search" id="search" placeholder="Type here to search">
-          <button class="visually-hidden" type="submit" tabindex="-1">Find</button>
+          <button class="visually-hidden" type="submit">Find</button>
         </form>
-        <a class="page-header__logo" href="main.html">
-          <svg class="page-header__logo-icon" width="66" height="66">
+        <a class="page-header__logo">
+          <svg width="66" height="66">
             <use xlink:href="img/sprite_auto.svg#logo"></use>
           </svg>
         </a>
@@ -78,9 +78,9 @@
           <a href="#">Contact Us</a>
         </li>
       </ul>
+      <a href="#" class="page-header__nav-login">Login</a>
     </nav>
   </header>
-
   <main class="page-main">
     <h1 class="visually-hidden">Jewellery</h1>
     <section class="intro intro--catalog">
@@ -92,7 +92,7 @@
       </div>
     </section>
     <section class="catalog">
-      <article class="catalog__filter filter filter--opened">
+      <article class="catalog__filter filter">
         <button class="filter__button filter__button--open" type="button">Filter</button>
         <div class="filter__container">
           <form action="https://echo.htmlacademy.ru/" class="filter__form" method="post">
@@ -348,7 +348,7 @@
         <p>News and updates from CH. No spam, we promise.</p>
         <form class="page-footer__form form form--footer" action="https://echo.htmlacademy.ru/" method="post">
           <label for="mailing-email" class="visually-hidden">E-mail</label>
-          <input type="email" name="mailing-email" id="mailing-email" placeholder="Your E-mail" required="">
+          <input type="email" name="mailing-email" id="mailing-email" autocomplete="email" autocapitalize="off" placeholder="Your E-mail" required="">
           <button type="submit">
             <span>Sign Up</span>
             <svg width="29" height="9">
@@ -426,7 +426,7 @@
       <h2>Log In</h2>
       <form action="#" class="login__form form form--login">
         <label class="visually-hidden" for="email"></label>
-        <input type="email" name="login-email" id="login-email" placeholder="Your E-mail">
+        <input type="email" name="login-email" id="login-email" autocomplete="email" autocapitalize="off" placeholder="Your E-mail">
         <label class="visually-hidden" for="password">Password</label>
         <input type="password" name="password" id="password" placeholder="Password">
         <a href="#">Forgot your password?</a>
@@ -434,7 +434,7 @@
       </form>
       <p>Don't have an account?<a href="#" class="login__sing-up">Sign Up</a></p>
       <button class="login__button-close" type="button">
-        <span class="visually-hidden">Закрыть</span>
+        <span class="visually-hidden">Close</span>
       </button>
     </div>
   </div>

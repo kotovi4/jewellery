@@ -7,6 +7,10 @@
     padding: 0 45px;
     align-items: flex-start;
   }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+  }
 }
 
 .page-header--opened {
@@ -68,10 +72,10 @@
       display: block;
     }
 
-    // .page-header__nav-list,
-    // .page-header__contact-list {
-    //   display: flex;
-    // }
+    .page-header__basket-icon:hover {
+      stroke: transparentize($white, 0.5);
+      transition: 0.3s;
+    }
   }
 }
 
@@ -103,7 +107,7 @@
   @media (max-width: $mobile-width) {
     min-height: auto;
     align-items: center;
-    padding: 18px 15px;
+    padding: 18px 0;
   }
 }
 
@@ -111,21 +115,22 @@
   display: block;
   margin-right: 50px;
 
+
   @media (max-width: $tablet-width) {
     display: block;
     margin: 5px auto;
     grid-column: 2/3;
     grid-row: 1/2;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-right: 7px;
 
     svg {
       fill: $accent;
       width: 52px;
       height: 52px;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
   }
 }
 
@@ -161,6 +166,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0;
     padding: 0;
   }
 }
@@ -218,6 +224,10 @@
       margin: 0 0 21px 0;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 0 8px;
+  }
 }
 
 .page-header__nav-list a {
@@ -246,11 +256,17 @@
     font-size: 24px;
     line-height: 36px;
     color: $white;
+
+    &:hover {
+      color: transparentize($white, 0.5);
+      transition: 0.3s;
+    }
   }
 }
 
 .page-header__contact-list {
   display: none;
+
   @media (max-width: $tablet-width) {
     display: flex;
     justify-content: space-around;
@@ -272,7 +288,7 @@
       color: transparentize($white, 0.5);
 
       &:hover {
-        color: $accent;
+        color: transparentize($white, 0.8);
         transition: 0.3s;
 
         &::after {
@@ -299,6 +315,15 @@
     font-size: 18px;
     line-height: 130%;
     color: $white;
+
+    &:hover {
+      color: transparentize($white, 0.5);
+      transition: 0.3s;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 13px 0;
   }
 }
 
