@@ -27,7 +27,7 @@ var loginButton = document.querySelector('.page-header__login');
 var loginSpan = document.querySelector('.login__span');
 
 loginButton.addEventListener('click', function (evt) {
-  if(loginModal) {
+  if (loginModal) {
     evt.preventDefault();
     loginModal.classList.remove('login--closed');
     loginModal.classList.add('login--opened');
@@ -78,7 +78,6 @@ loginButton.addEventListener('click', function (evt) {
     }
   });
 });
-
 
 //аккордеон
 var switchTabsAccordion = function (tabs, className) {
@@ -134,8 +133,8 @@ if (filter) {
   filterCloseButton.addEventListener('click', () => filter.classList.remove('filter--opened'));
 }
 
- // слайдер
- try {
+// слайдер
+try {
   var slider = document.querySelector('.new__cards ul');
   var sliderItems = document.querySelectorAll('.new__cards li');
   var sliderPadeItems = document.querySelectorAll('.new__button');
@@ -197,7 +196,7 @@ if (filter) {
   var toNextSlide = function () {
     currentSlideIndex = currentSlideIndex + 1;
     if (currentSlideIndex === slidesCount) {
-      currentSlideIndex = slidesCount -1;
+      currentSlideIndex = slidesCount - 1;
     }
     pushSlide(currentSlideIndex);
   };
@@ -242,5 +241,5 @@ if (filter) {
 
   enableSlider();
 } catch (e) {
-    console.log();
+  console.log();
 }
