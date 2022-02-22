@@ -122,3 +122,13 @@
     opacity: 0.7;
   }
 }
+
+.login__back-link {
+  position: static;
+  margin: 20px auto;
+  width: max-content;
+  max-width: 250px;
+  color: $black;
+  z-index: 30;
+  cursor: pointer;
+}

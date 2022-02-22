@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -441,14 +441,14 @@
       </ul>
     </div>
   </footer>
-  <div class="login login--closed">
+  <div class="login login--closed" id="login">
     <div class="login__wrapper">
       <h2>Log In</h2>
       <form action="#" class="login__form form form--login">
         <label class="visually-hidden" for="email"></label>
-        <input type="email" name="login-email" id="login-email" autocomplete="email" autocapitalize="off" placeholder="Your E-mail">
+        <input type="email" name="email" id="email" autocomplete="email" autocapitalize="off" placeholder="Your E-mail" required="">
         <label class="visually-hidden" for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="password" name="password" id="password" placeholder="Password" required="">
         <a href="#">Forgot your password?</a>
         <button>Log In</button>
       </form>
@@ -456,6 +456,7 @@
       <button class="login__button-close" type="button">
         <span class="visually-hidden">Close</span>
       </button>
+      <button class="visually-hidden login__span"></button>
     </div>
   </div>
   <script src="js/main.js"></script>

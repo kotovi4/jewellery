@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +38,6 @@
           </svg>
         </a>
         <div class="page-header__user">
-          <a class="page-header__login" href="#">Login</a>
           <a class="page-header__basket" href="#">
             <span>Cart</span>
             <span>0</span>
@@ -81,15 +80,17 @@
       <a href="#" class="page-header__nav-login">Login</a>
     </nav>
   </header>
+
   <main class="page-main">
+    <a class="login__back-link" href="main.html">Back to main page</a>
     <div class="login">
       <div class="login__wrapper">
         <h2>Log In</h2>
         <form action="#" class="login__form form form--login">
           <label class="visually-hidden" for="email"></label>
-          <input type="email" name="login-email" id="login-email" autocomplete="email" autocapitalize="off" placeholder="Your E-mail">
+          <input type="email" name="email" id="email" autocomplete="email" autocapitalize="off" placeholder="Your E-mail" required>
           <label class="visually-hidden" for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password">
+          <input type="password" name="password" id="password" placeholder="Password" required>
           <a href="#">Forgot your password?</a>
           <button>Log In</button>
         </form>
@@ -97,103 +98,6 @@
       </div>
     </div>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <div class="page-footer__mailing">
-        <h2>The good stuff in your inbox</h2>
-        <p>News and updates from CH. No spam, we promise.</p>
-        <form class="page-footer__form form form--footer" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="mailing-email" class="visually-hidden">E-mail</label>
-          <input type="email" name="mailing-email" id="mailing-email" autocomplete="email" autocapitalize="off" placeholder="Your E-mail" required>
-          <button type="submit">
-            <span>Sign Up</span>
-            <svg width="29" height="9">
-              <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
-            </svg>
-          </button>
-        </form>
-      </div>
-      <ul class="page-footer__information">
-        <li>
-          <a href="#">Ordering & Payment</a>
-        </li>
-        <li>
-          <a href="#">Terms & Conditions</a>
-        </li>
-        <li>
-          <a href="#">Returns & Exchanges</a>
-        </li>
-        <li>
-          <a href="#">Delivery</a>
-        </li>
-      </ul>
-      <ul class="page-footer__about">
-        <li>
-          <a href="#">About CH</a>
-        </li>
-        <li>
-          <a href="#">Stores & Hours</a>
-        </li>
-        <li>
-          <a href="#">Jobs</a>
-        </li>
-        <li>
-          <a href="#">Contact Us</a>
-        </li>
-      </ul>
-      <ul class="page-footer__social">
-        <li>
-          <a href="#">
-            <svg class="page-footer__social-icon page-footer__social-icon--fb" width="12" height="15">
-              <use xlink:href="img/sprite_auto.svg#fb-icon"></use>
-            </svg>
-            <span>Facebook</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <svg class="page-footer__social-icon" width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#inst-icon"></use>
-            </svg>
-            <span>Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <svg class="page-footer__social-icon" width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#pinterest-icon"></use>
-            </svg>
-            <span>Pinterest</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <svg class="page-footer__social-icon" width="15" height="13">
-              <use xlink:href="img/sprite_auto.svg#tw-icon"></use>
-            </svg>
-            <span>Twitter</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-  <div class="login login--closed">
-    <div class="login__wrapper">
-      <h2>Log In</h2>
-      <form action="#" class="login__form form form--login">
-        <label class="visually-hidden" for="email"></label>
-        <input type="email" name="login-email" id="login-email" autocomplete="email" autocapitalize="off" placeholder="Your E-mail">
-        <label class="visually-hidden" for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Password">
-        <a href="#">Forgot your password?</a>
-        <button>Log In</button>
-      </form>
-      <p>Don't have an account?<a href="#" class="login__sing-up">Sign Up</a></p>
-      <button class="login__button-close" type="button">
-        <span class="visually-hidden">Close</span>
-      </button>
-    </div>
-  </div>
   <script src="js/main.js"></script>
 </body>
 </html>
