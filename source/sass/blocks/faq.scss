@@ -89,7 +89,7 @@
     border-bottom: 1px solid $accent;
   }
 
-  &--open {
+  &--opened {
     &::before {
       top: 52px;
       transform: rotate(-135deg);
@@ -114,7 +114,7 @@
       margin: 0;
     }
 
-    &--open {
+    &--opened {
       &::before {
         top: 52px;
       }
@@ -134,7 +134,7 @@
       padding: 7px;
     }
 
-    &--open {
+    &--opened {
       &::before {
         top: 25px;
         right: 28px;

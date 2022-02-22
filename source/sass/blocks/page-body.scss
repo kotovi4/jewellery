@@ -11,5 +11,9 @@
       height: auto;
       min-height: 778px;
     }
+
+    .filter--opened .filter__container {
+      position: relative;
+    }
   }
 }
