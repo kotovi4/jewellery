@@ -1,22 +1,3 @@
-.price {
-  @media (max-width: $tablet-width) {
-    padding-bottom: 15px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-bottom: 10px;
-  }
-}
-
-.price__wrapper {
-  display: none;
-  min-height: 58px;
-
-  @media (max-width: $tablet-width) {
-    position: relative;
-  }
-}
-
 .price__all-price-range {
   height: 1px;
   width: 200px;

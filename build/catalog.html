@@ -99,50 +99,56 @@
         <div class="filter__container">
           <form action="https://echo.htmlacademy.ru/" class="filter__form" method="post">
             <div class="filter__blocks-list">
-              <div class="filter__block filter__block--opened">
-                <button>Product</button>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Necklaces" id="Necklaces" checked="">
-                  <label for="Necklaces">Necklaces</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Chokers" id="Chokers" checked="">
-                  <label for="Chokers">Chokers</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Rings" id="Rings">
-                  <label for="Rings">Rings</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Earrings" id="Earrings" checked="">
-                  <label for="Earrings">Earrings</label>
-                </div>
+              <div class="filter__block">
+                <button class="filter__accordion filter__accordion--opened">Product</button>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Necklaces" id="Necklaces" checked="">
+                    <label for="Necklaces">Necklaces</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Chokers" id="Chokers" checked="">
+                    <label for="Chokers">Chokers</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Rings" id="Rings">
+                    <label for="Rings">Rings</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Earrings" id="Earrings" checked="">
+                    <label for="Earrings">Earrings</label>
+                  </li>
+                </ul>
               </div>
               <div class="filter__block">
-                <button>Material</button>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Gold" id="Gold">
-                  <label for="Gold">Gold</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Silver" id="Silver">
-                  <label for="Silver">Silver</label>
-                </div>
+                <button class="filter__accordion filter__accordion--opened">Material</button>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Gold" id="Gold">
+                    <label for="Gold">Gold</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Silver" id="Silver">
+                    <label for="Silver">Silver</label>
+                  </li>
+                </ul>
               </div>
               <div class="filter__block">
-                <button>Collection</button>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Pink flamingo" id="Pink-flamingo">
-                  <label for="Pink-flamingo">Pink flamingo</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Dreams" id="Dreams">
-                  <label for="Dreams">Dreams</label>
-                </div>
+                <button class="filter__accordion filter__accordion--opened">Collection</button>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Pink flamingo" id="Pink-flamingo">
+                    <label for="Pink-flamingo">Pink flamingo</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Dreams" id="Dreams">
+                    <label for="Dreams">Dreams</label>
+                  </li>
+                </ul>
               </div>
-              <div class="filter__block filter__block--opened price">
-                <button>Price</button>
-                <div class="price__wrapper">
+              <div class="filter__block">
+                <button class="filter__accordion filter__accordion--opened">Price</button>
+                <div class="filter__wrapper price">
                   <div class="price__all-price-range"></div>
                   <div class="price__actually-price-range"></div>
                   <div class="price__togglers">
