@@ -95,20 +95,20 @@
       <div class="new__slider">
         <h2>New In</h2>
         <a href="catalog.html">Shop Now</a>
-        <button class="new__slider-button new__slider-button--left">
+        <button class="swiper-button-prev new__slider-button new__slider-button--left ">
           <svg width="29" height="9">
             <use xlink:href="img/sprite_auto.svg#arrow-left"></use>
           </svg>
         </button>
-        <button class="new__slider-button new__slider-button--right">
+        <button class="swiper-button-next new__slider-button new__slider-button--right ">
           <svg width="29" height="9">
             <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
           </svg>
         </button>
       </div>
-      <div class="new__cards">
-        <ul>
-          <li>
+      <div class="swiper-container new__cards">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -120,7 +120,7 @@
               <p>$ 145</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -132,7 +132,7 @@
               <p>$ 115</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -144,7 +144,7 @@
               <p>$ 215</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -156,8 +156,7 @@
               <p>$ 95</p>
             </a>
           </li>
-
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -169,7 +168,7 @@
               <p>$ 145</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -181,7 +180,7 @@
               <p>$ 115</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -193,7 +192,7 @@
               <p>$ 215</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -205,8 +204,7 @@
               <p>$ 95</p>
             </a>
           </li>
-
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -218,7 +216,7 @@
               <p>$ 145</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -230,7 +228,7 @@
               <p>$ 115</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -242,7 +240,7 @@
               <p>$ 215</p>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <picture>
                 <!-- 1x: 270px; 2x: 540px -->
@@ -256,18 +254,13 @@
           </li>
         </ul>
       </div>
-      <ul class="new__buttons">
-        <li class="new__button new__button--active"><a href="#">1</a></li>
-        <li class="new__button"><a href="#">2</a></li>
-        <li class="new__button"><a href="#">3</a></li>
-        <li class="new__button"><a href="#">4</a></li>
-        <li class="new__button"><a href="#">5</a></li>
-        <li class="new__button"><a href="#">6</a></li>
-      </ul>
-      <div class="new__buttons new__buttons--mobile">
-        <span>1</span>
-        <span>of</span>
-        <span>6</span>
+      <div class="swiper-pagination pagination-list">
+        <button class="new__button new__button--active">1</button>
+        <button class="new__button">2</button>
+        <button class="new__button">3</button>
+        <button class="new__button">4</button>
+        <button class="new__button">5</button>
+        <button class="new__button">6</button>
       </div>
     </section>
     <section class="blog">
@@ -508,6 +501,7 @@
       <button class="visually-hidden login__span"></button>
     </div>
   </div>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

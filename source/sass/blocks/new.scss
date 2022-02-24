@@ -95,15 +95,14 @@
 
 .new__cards {
   max-width: 1170px;
+  overflow: hidden;
 
   ul {
     display: flex;
-    column-gap: 30px;
     list-style: none;
     text-align: center;
     margin: 0;
     padding: 59px 0 41px 0;
-    overflow: hidden;
   }
 
   li {
@@ -187,24 +186,24 @@
 }
 
 .new__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $gray;
+  border: 0;
+  background-color: $white;
+  cursor: pointer;
+
+  &--active {
+    color: $black;
+  }
+
   &:not(:last-child) {
     padding: 0 7px 0 5px;
   }
 
   &:nth-child(n+4) {
     display: none;
-  }
-
-  a {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
-    color: $gray;
-    cursor: pointer;
-  }
-
-  &--active a {
-    color: $black;
   }
 
   @media (max-width: $tablet-width) {
@@ -222,20 +221,6 @@
 
     &:nth-child(n+4) {
       display: none;
-    }
-  }
-}
-
-.new__buttons--mobile {
-  display: none;
-
-  @media (max-width: $mobile-width) {
-    display: block;
-    text-align: center;
-
-    span {
-      text-align: center;
-      padding: 0 3px;
     }
   }
 }

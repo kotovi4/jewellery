@@ -134,112 +134,60 @@ if (filter) {
 }
 
 // слайдер
-try {
-  var slider = document.querySelector('.new__cards ul');
-  var sliderItems = document.querySelectorAll('.new__cards li');
-  var sliderPadeItems = document.querySelectorAll('.new__button');
-  var leftSlideButton = document.querySelector('.new__slider-button--left');
-  var rightSlideButton = document.querySelector('.new__slider-button--right');
-  var mobilePageSliderCounter = document.querySelector('.new__buttons--mobile span');
+var swiperContainer = document.querySelector('.swiper-container');
 
-  var currentSlideIndex = 0;
-  var lastSlideIndex = 0;
-  var sliderGap = 30;
-  var percentSymbol = '% - ';
-  var slidesCount;
-  var startPos;
+if (swiperContainer) {
+  var swiper = new window.Swiper(swiperContainer, {
+    spaceBetween: 30,
+    loop: true,
+    loopPreventsSlide: true,
 
-  var windowDesktopSize = window.matchMedia('(min-width: 1024px)');
-  var windowTabletSize = window.matchMedia('(min-width: 768px)');
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'custom',
+          renderCustom: function (swiper, current, total) {
+            return current + ' of ' + total;
+          },
+        },
+      },
 
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          bulletClass: 'pagination-list__page',
+          bulletActiveClass: 'pagination-list__page--active',
+          renderBullet: function (index, className) {
+            return '<button class="' + className + '">' + (index + 1) + '</button>';
+          }
+        },
+      },
 
-  var enableSlider = function () {
-    if (windowDesktopSize.matches) {
-      slidesCount = 3;
-      rightSlideButton.addEventListener('click', toNextSlide);
-      leftSlideButton.addEventListener('click', toPreviousSlide);
-      sliderPageButtons();
-    } else if (windowTabletSize.matches) {
-      slidesCount = 6;
-      rightSlideButton.addEventListener('click', toNextSlide);
-      leftSlideButton.addEventListener('click', toPreviousSlide);
-      sliderPageButtons();
-      swipeSlider();
-    } else {
-      slidesCount = 6;
-      swipeSlider();
-    }
-  };
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          bulletClass: 'new__button',
+          bulletActiveClass: 'new__button--active',
+          renderBullet: function (index, className) {
+            return '<button class="' + className + '">' + (index + 1) + '</button>';
+          }
+        },
+      },
+    },
 
-  var pushSlide = function (buttonIndex) {
-    sliderPadeItems[lastSlideIndex].classList.remove('new__button--active');
-    for (var i = 0; i < sliderItems.length; i++) {
-      currentSlideIndex = buttonIndex;
-      sliderItems[i].style.left = 'calc(-' + (100 * currentSlideIndex) + percentSymbol + (sliderGap * currentSlideIndex) + 'px)';
-    }
-    sliderPadeItems[currentSlideIndex].classList.add('new__button--active');
-    lastSlideIndex = currentSlideIndex;
-  };
-
-  var changeSlideOnPressPage = function (index) {
-    sliderPadeItems[index].addEventListener('click', () => {
-      pushSlide(index);
-    });
-  };
-
-  var sliderPageButtons = function () {
-    for (var i = 0; i < slidesCount; i++) {
-      changeSlideOnPressPage(i);
-    }
-  };
-
-  var toNextSlide = function () {
-    currentSlideIndex = currentSlideIndex + 1;
-    if (currentSlideIndex === slidesCount) {
-      currentSlideIndex = slidesCount - 1;
-    }
-    pushSlide(currentSlideIndex);
-  };
-
-  var toPreviousSlide = function () {
-    currentSlideIndex = currentSlideIndex - 1;
-    if (currentSlideIndex === -1) {
-      currentSlideIndex = 0;
-    }
-    pushSlide(currentSlideIndex);
-  };
-
-  var swipeSlider = function () {
-    var swipeRange = 50;
-
-    slider.addEventListener('touchstart', (evt) => {
-      startPos = evt.touches[0].clientX;
-      document.addEventListener('touchmove', touchMove);
-    });
-
-    var touchMove = function (moveEvt) {
-      var movePos = moveEvt.touches[0].clientX;
-
-      if (movePos - startPos > swipeRange) {
-        toPreviousSlide();
-        sliderPageNumber();
-        document.removeEventListener('touchmove', touchMove);
-      }
-
-      if (startPos - movePos > swipeRange) {
-        toNextSlide();
-        sliderPageNumber();
-        document.removeEventListener('touchmove', touchMove);
-      }
-    };
-  };
-
-  var sliderPageNumber = function () {
-    var pageNumber = currentSlideIndex + 1;
-    mobilePageSliderCounter.innerHTML = pageNumber;
-  };
-
-  enableSlider();
-} catch (e) {
-  console.log();
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 }
