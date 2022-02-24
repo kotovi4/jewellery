@@ -7,6 +7,7 @@
 
   h2 {
     margin: 0 0 20px;
+    font-family: $font-secondary;
     font-weight: 600;
     font-size: 34px;
     line-height: 130%;
@@ -141,6 +142,7 @@
   h3 {
     margin: 13px auto 38px;
     max-width: 163px;
+    font-family: $font-secondary;
     font-weight: 600;
     font-size: 26px;
     line-height: 130%;
@@ -197,15 +199,4 @@
       padding: 62px 0 70px;
     }
   }
-}
-
-.post__info {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-  align-items: center;
-  width: 50%;
-  min-height: 300px;
-  margin-left: auto;
-  padding: 11.58% 10.7%;
 }

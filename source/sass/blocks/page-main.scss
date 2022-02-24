@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
+}
 
-  &__back-link {
-    position: static;
-    margin: 20px auto;
-    width: max-content;
-    max-width: 250px;
-    color: $black;
-    z-index: 30;
-    cursor: pointer;
-  }
+.page-main__back-link {
+  position: static;
+  margin: 20px auto;
+  width: max-content;
+  max-width: 250px;
+  color: $black;
+  z-index: 30;
+  cursor: pointer;
 }

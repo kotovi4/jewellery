@@ -32,7 +32,7 @@
           </label>
           <button class="visually-hidden" type="submit">Find</button>
         </form>
-        <a class="page-header__logo">
+        <a class="page-header__logo" aria-label="Logo">
           <svg width="66" height="66">
             <use xlink:href="img/sprite_auto.svg#logo"></use>
           </svg>
@@ -42,10 +42,10 @@
           <a class="page-header__basket" href="#">
             <span>Cart</span>
             <span>0</span>
+            <svg class="page-header__basket-icon" width="18" height="16">
+              <use xlink:href="img/sprite_auto.svg#basket-icon"></use>
+            </svg>
           </a>
-          <svg class="page-header__basket-icon" width="18" height="16">
-            <use xlink:href="img/sprite_auto.svg#basket-icon"></use>
-          </svg>
         </div>
       </div>
     </div>
@@ -257,12 +257,12 @@
         </ul>
       </div>
       <ul class="new__buttons">
-        <li class="new__button new__button--active">1</li>
-        <li class="new__button">2</li>
-        <li class="new__button">3</li>
-        <li class="new__button">4</li>
-        <li class="new__button">5</li>
-        <li class="new__button">6</li>
+        <li class="new__button new__button--active"><a href="#">1</a></li>
+        <li class="new__button"><a href="#">2</a></li>
+        <li class="new__button"><a href="#">3</a></li>
+        <li class="new__button"><a href="#">4</a></li>
+        <li class="new__button"><a href="#">5</a></li>
+        <li class="new__button"><a href="#">6</a></li>
       </ul>
       <div class="new__buttons new__buttons--mobile">
         <span>1</span>
@@ -308,7 +308,7 @@
           <article>
             <picture>
               <!-- 1x: 339px; 2x: 678px -->
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/blog-trends-table@1x.webp, img/blog-trends-tablet@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/blog-trends-tablet@1x.webp, img/blog-trends-tablet@2x.webp 2x">
               <!-- 1x: 570px; 2x: 1140px -->
               <source type="image/webp" srcset="img/blog-trends-desktop@1x.webp 1x, img/blog-trends-desktop@2x.webp 2x">
               <!-- 1x: 339px; 2x: 678px -->
@@ -329,19 +329,19 @@
       <h2>Frequently asked questions</h2>
       <ul>
         <li class="faq__item faq__item--open">
-          <h3>What materials are the jewellery made of?</h3>
+          <button>What materials are the jewellery made of?</button>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faq__item faq__item--open">
-          <h3>Which countries <br class="faq__item-br"> do you deliver to?</h3>
+          <button>Which countries <br class="faq__item-br"> do you deliver to?</button>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faq__item faq__item--open">
-          <h3>What are the payment methods?</h3>
+          <button>What are the payment methods?</button>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faq__item faq__item--open">
-          <h3>Can I return the <br class="faq__item-br"> jewellery if it didn’t fit me?</h3>
+          <button>Can I return the <br class="faq__item-br"> jewellery if it didn’t fit me?</button>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
       </ul>

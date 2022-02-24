@@ -41,7 +41,7 @@
   }
 
   h3 {
-    margin: 18px 0 6px 0;
+    margin: 22px 0 6px 0;
     font-family: $font-default;
     font-weight: 500;
     font-size: 16px;
@@ -94,13 +94,13 @@
 .catalog__nav {
   position: relative;
   display: flex;
-  margin: 0 0 38px 50px;
+  margin: 0 0 40px 50px;
   padding-top: 28px;
 
   &::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: -8px;
     width: 100%;
     height: 1px;
     transform: translateX(-50%);
@@ -153,16 +153,19 @@
 
 .catalog__toggle {
   padding: 0 6px 0 7px;
-  font-family: $font-default;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: $gray;
   border: 0;
   background-color: transparent;
-  cursor: pointer;
 
-  &--active {
+  a {
+    font-family: $font-default;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: $gray;
+    cursor: pointer;
+  }
+
+  &--active a {
     color: $black;
   }
 

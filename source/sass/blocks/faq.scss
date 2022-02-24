@@ -14,20 +14,25 @@
   h2 {
     margin-bottom: 48px;
     text-align: center;
+    font-family: $font-secondary;
     font-weight: 600;
     font-size: 34px;
     line-height: 130%;
     letter-spacing: 0.03em;
   }
 
-  h3 {
+  button {
     position: relative;
     display: flex;
+    text-align: left;
     margin: 0;
+    padding: 0;
     font-family: $font-default;
     font-weight: 500;
     font-size: 18px;
     line-height: 130%;
+    border: 0;
+    background-color: $white;
   }
 
   p {
@@ -52,7 +57,7 @@
       margin-bottom: 28px;
     }
 
-    h3 {
+    button {
       font-size: 16px;
       line-height: 140%;
     }
@@ -81,7 +86,7 @@
     right: 50px;
   }
 
-  &:hover h3 {
+  &:hover button {
     color: $accent;
   }
 
@@ -124,7 +129,7 @@
   @media (max-width: $mobile-width) {
     padding: 15px 25px 21px 25px;
 
-    &:not(:last-of-type) h3 {
+    &:not(:last-of-type) button {
       margin-right: 56px;
     }
 

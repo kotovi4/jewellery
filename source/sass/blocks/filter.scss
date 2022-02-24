@@ -51,17 +51,21 @@
     border-bottom: 1px solid $accent;
   }
 
-  p {
+  button {
     position: relative;
-    margin: 25px 0 20px 0;
+    margin: 23px 0 20px 0;
+    text-align: left;
+    padding: 0;
+    border: 0;
     font-weight: 500;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 130%;
     color: $black;
+    background-color: $white;
     cursor: pointer;
   }
 
-  p::before {
+  button::before {
     position: absolute;
     display: inline-block;
     content: "";
@@ -77,13 +81,13 @@
     border: 0;
     border-bottom: 1px solid $accent;
 
-    p {
+    button {
       margin: 34px 0 30px;
       font-size: 18px;
       line-height: 130%;
     }
 
-    p::before {
+    button::before {
       padding: 9px;
       right: 18px;
     }
@@ -92,7 +96,7 @@
   @media (max-width: $mobile-width) {
     padding: 0 20px;
 
-    p {
+    button {
       margin: 24px 0 25px;
     }
   }
