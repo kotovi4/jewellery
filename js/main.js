@@ -105,17 +105,17 @@ if (faqItems) {
 switchTabsAccordion(faqItems, 'faq__item--opened');
 
 //аккордеон фильтра
-var tabsFilter = document.querySelectorAll('.filter__block');
+var tabsFilter = document.querySelectorAll('.filter__accordion');
 
 if (tabsFilter) {
   tabsFilter.forEach(function (tab) {
-    if (!tab.classList.contains('filter__block--opened')) {
-      tab.classList.add('filter__block--opened');
+    if (!tab.classList.contains('filter__accordion--opened')) {
+      tab.classList.add('filter__accordion--opened');
     }
   });
 }
 
-switchTabsAccordion(tabsFilter, 'filter__block--opened');
+switchTabsAccordion(tabsFilter, 'filter__accordion--opened');
 
 //открыие и закрытие фильтра на мобильном меню
 var filterOpenButton = document.querySelector('.filter__button--open');

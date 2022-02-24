@@ -32,7 +32,7 @@
           </label>
           <button class="visually-hidden" type="submit">Find</button>
         </form>
-        <a class="page-header__logo">
+        <a class="page-header__logo" aria-label="Logo">
           <svg width="66" height="66">
             <use xlink:href="img/sprite_auto.svg#logo"></use>
           </svg>
@@ -42,10 +42,10 @@
           <a class="page-header__basket" href="#">
             <span>Cart</span>
             <span>0</span>
+            <svg class="page-header__basket-icon" width="18" height="16">
+              <use xlink:href="img/sprite_auto.svg#basket-icon"></use>
+            </svg>
           </a>
-          <svg class="page-header__basket-icon" width="18" height="16">
-            <use xlink:href="img/sprite_auto.svg#basket-icon"></use>
-          </svg>
         </div>
       </div>
     </div>
@@ -99,50 +99,56 @@
         <div class="filter__container">
           <form action="https://echo.htmlacademy.ru/" class="filter__form" method="post">
             <div class="filter__blocks-list">
-              <div class="filter__block filter__block--opened">
-                <p>Product</p>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Necklaces" id="Necklaces" checked="">
-                  <label for="Necklaces">Necklaces</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Chokers" id="Chokers" checked="">
-                  <label for="Chokers">Chokers</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Rings" id="Rings">
-                  <label for="Rings">Rings</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Earrings" id="Earrings" checked="">
-                  <label for="Earrings">Earrings</label>
-                </div>
+              <div class="filter__block">
+                <button class="filter__accordion filter__accordion--opened">Product</button>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Necklaces" id="Necklaces" checked="">
+                    <label for="Necklaces">Necklaces</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Chokers" id="Chokers" checked="">
+                    <label for="Chokers">Chokers</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Rings" id="Rings">
+                    <label for="Rings">Rings</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Earrings" id="Earrings" checked="">
+                    <label for="Earrings">Earrings</label>
+                  </li>
+                </ul>
               </div>
               <div class="filter__block">
-                <p>Material</p>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Gold" id="Gold">
-                  <label for="Gold">Gold</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Silver" id="Silver">
-                  <label for="Silver">Silver</label>
-                </div>
+                <button class="filter__accordion filter__accordion--opened">Material</button>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Gold" id="Gold">
+                    <label for="Gold">Gold</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Silver" id="Silver">
+                    <label for="Silver">Silver</label>
+                  </li>
+                </ul>
               </div>
               <div class="filter__block">
-                <p>Collection</p>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Pink flamingo" id="Pink-flamingo">
-                  <label for="Pink-flamingo">Pink flamingo</label>
-                </div>
-                <div class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="Dreams" id="Dreams">
-                  <label for="Dreams">Dreams</label>
-                </div>
+                <button class="filter__accordion filter__accordion--opened">Collection</button>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Pink flamingo" id="Pink-flamingo">
+                    <label for="Pink-flamingo">Pink flamingo</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="visually-hidden" type="checkbox" name="Dreams" id="Dreams">
+                    <label for="Dreams">Dreams</label>
+                  </li>
+                </ul>
               </div>
-              <div class="filter__block filter__block--opened price">
-                <p>Price</p>
-                <div class="price__wrapper">
+              <div class="filter__block">
+                <button class="filter__accordion filter__accordion--opened">Price</button>
+                <div class="filter__wrapper price">
                   <div class="price__all-price-range"></div>
                   <div class="price__actually-price-range"></div>
                   <div class="price__togglers">
@@ -332,11 +338,11 @@
         <div class="catalog__nav">
           <button type="button">Previous</button>
           <ul class="catalog__toggles">
-            <li class="catalog__toggle catalog__toggle--active">1</li>
-            <li class="catalog__toggle">2</li>
-            <li class="catalog__toggle">3</li>
-            <li class="catalog__toggle">4</li>
-            <li class="catalog__toggle">5</li>
+            <li class="catalog__toggle catalog__toggle--active"><a href="#">1</a></li>
+            <li class="catalog__toggle"><a href="#">2</a></li>
+            <li class="catalog__toggle"><a href="#">3</a></li>
+            <li class="catalog__toggle"><a href="#">4</a></li>
+            <li class="catalog__toggle"><a href="#">5</a></li>
           </ul>
           <button type="button">Next</button>
         </div>

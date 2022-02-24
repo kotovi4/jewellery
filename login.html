@@ -32,7 +32,7 @@
           </label>
           <button class="visually-hidden" type="submit">Find</button>
         </form>
-        <a class="page-header__logo">
+        <a class="page-header__logo" aria-label="Logo">
           <svg width="66" height="66">
             <use xlink:href="img/sprite_auto.svg#logo"></use>
           </svg>
@@ -42,10 +42,10 @@
           <a class="page-header__basket" href="#">
             <span>Cart</span>
             <span>0</span>
+            <svg class="page-header__basket-icon" width="18" height="16">
+              <use xlink:href="img/sprite_auto.svg#basket-icon"></use>
+            </svg>
           </a>
-          <svg class="page-header__basket-icon" width="18" height="16">
-            <use xlink:href="img/sprite_auto.svg#basket-icon"></use>
-          </svg>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
     </nav>
   </header>
   <main class="page-main">
-    <a class="login__back-link" href="main.html">Back to main page</a>
+    <a class="page-main__back-link" href="main.html">Back to main page</a>
     <div class="login">
       <div class="login__wrapper">
         <h2>Log In</h2>
