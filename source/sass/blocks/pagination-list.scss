@@ -1,0 +1,17 @@
+.pagination-list__page {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $gray;
+  border: 0;
+  background-color: $white;
+  cursor: pointer;
+
+  &--active {
+    color: $black;
+  }
+
+  &:not(:last-child) {
+    padding: 0 7px 0 5px;
+  }
+}

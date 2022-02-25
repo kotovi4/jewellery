@@ -176,8 +176,8 @@ if (swiperContainer) {
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
-          bulletClass: 'new__button',
-          bulletActiveClass: 'new__button--active',
+          bulletClass: 'pagination-list__page',
+          bulletActiveClass: 'pagination-list__page--active',
           renderBullet: function (index, className) {
             return '<button class="' + className + '">' + (index + 1) + '</button>';
           }
