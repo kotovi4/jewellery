@@ -138,6 +138,7 @@
     font-size: 14px;
     line-height: 18px;
     cursor: pointer;
+
   }
 
   input + label::before {
@@ -153,6 +154,10 @@
 
   input:checked + label::before {
     background-color: $accent;
+  }
+
+  input:focus + label::before {
+    outline: 2px solid transparentize($accent, 0.7);
   }
 
   @media (max-width: $tablet-width) {
