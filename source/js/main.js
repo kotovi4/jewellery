@@ -139,7 +139,7 @@ var swiperContainer = document.querySelector('.swiper-container');
 if (swiperContainer) {
   var swiper = new window.Swiper(swiperContainer, {
     spaceBetween: 30,
-    loop: true,
+    loop: false,
     loopPreventsSlide: true,
 
     breakpoints: {
